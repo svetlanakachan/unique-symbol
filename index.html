@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get unique symbol</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <label for="input-text">Input your text:</label>
+
+    <textarea
+      id="inputText"
+      rows="auto"
+      oninput="this.style.height = ''; this.style.height = this.scrollHeight +'px'"
+    ></textarea>
+    <button onclick="getResult()">Show result</button>
+
+    <div id="outputBlock">
+      <label for="outputResult">Result:</label>
+      <output id="outputResult" for="inputText"></output>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
