@@ -20,7 +20,7 @@ function getFirstuUiqueSymb(inputStr) {
     if (inputStr) {
         const length = inputStr.length;
 
-        // частный случай: строка из 1го символа
+        // special case: string of 1 character
         if (length === 1) {
             return inputStr;
         }
@@ -28,13 +28,13 @@ function getFirstuUiqueSymb(inputStr) {
         for (let ind = 0; ind < length; ind++) {
             const symbol = inputStr[ind];
 
-            // символ уникальный если первый и последний найденный индекс по текущему символу совпадают
+            // character is unique if the first and last index found for the current character match
             if (ind === inputStr.indexOf(symbol) && ind === inputStr.lastIndexOf(symbol)) {
                 return symbol;
             }
         }
 
-        // если не нашли уникальный символ
+        // if you didn't find a unique character
         return "";
     }
     return "";
